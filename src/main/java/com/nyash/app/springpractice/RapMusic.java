@@ -1,9 +1,9 @@
 package com.nyash.app.springpractice;
 
-public class JazzMusic implements Music{
+public class RapMusic implements Music{
 
     @Override
     public String getSong() {
-        return "Dying Light";
+        return "99 problems";
     }
 }
