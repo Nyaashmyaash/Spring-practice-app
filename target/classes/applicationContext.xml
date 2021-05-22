@@ -7,9 +7,19 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="com.nyash.app.springpractice.TestBean">
-        <constructor-arg value="Nyash"/>
+
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <bean id="musicBean"
+          class="com.nyash.app.springpractice.JazzMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="com.nyash.app.springpractice.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+        
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>
