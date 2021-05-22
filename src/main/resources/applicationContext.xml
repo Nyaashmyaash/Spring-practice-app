@@ -9,7 +9,7 @@
 
     <bean id="testBean"
           class="com.nyash.app.springpractice.TestBean">
-        <constructor-arg value="Neil"/>
+        <constructor-arg value="Nyash"/>
     </bean>
 
 </beans>
