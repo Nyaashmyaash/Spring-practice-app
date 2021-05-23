@@ -14,7 +14,8 @@
     <bean id="musicBean"
           class="com.nyash.app.springpractice.ClassicalMusic"
           init-method="doMyInit"
-          destroy-method="doingMyDestroy">
+          destroy-method="doingMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
     <!--    <bean id="musicPlayer"-->
