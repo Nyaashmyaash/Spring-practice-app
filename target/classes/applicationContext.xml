@@ -6,25 +6,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
 
-
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-          class="com.nyash.app.springpractice.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doingMyDestroy"
-          factory-method="getClassicalMusic">
-    </bean>
-
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="com.nyash.app.springpractice.MusicPlayer"-->
-    <!--          scope="prototype">-->
-    <!--        <property name="music" ref="musicBean"/>-->
-
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
-    <!--    </bean>-->
+    <context:component-scan base-package="com.nyash.app.springpractice"/>
 
 </beans>
