@@ -11,30 +11,19 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="musicBean1"
-          class="com.nyash.app.springpractice.RapMusic">
+    <bean id="musicBean"
+          class="com.nyash.app.springpractice.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doingMyDestroy">
     </bean>
 
-    <bean id="musicBean2"
-          class="com.nyash.app.springpractice.RockMusic">
-    </bean>
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="com.nyash.app.springpractice.MusicPlayer"-->
+    <!--          scope="prototype">-->
+    <!--        <property name="music" ref="musicBean"/>-->
 
-    <bean id="musicBean3"
-          class="com.nyash.app.springpractice.ClassicalMusic">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="com.nyash.app.springpractice.MusicPlayer">
-        <property name="musicList">
-            <list>
-                <ref bean="musicBean1"/>
-                <ref bean="musicBean2"/>
-                <ref bean="musicBean3"/>
-            </list>
-        </property>
-
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    <!--        <property name="name" value="${musicPlayer.name}"/>-->
+    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--    </bean>-->
 
 </beans>
