@@ -3,10 +3,13 @@ package com.nyash.app.springpractice;
 
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 
 public class RapMusic implements Music{
+
     @Override
-    public String getSong() {
-        return "99 problems";
+    public List<String> getSongs() {
+        return null;
     }
 }
